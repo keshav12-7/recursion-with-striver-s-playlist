@@ -1,0 +1,79 @@
+Ways to initialize iterator:
+
+auto it = container.begin();   // first element
+auto it = container.end();     // after last element
+
+or
+
+container_type::iterator it = container.begin();
+
+vector<int>::iterator it = v.begin();
+
+or
+
+auto it = v.begin();
+
+Access:
+
+cout << *it;
+
+Output:
+
+10
+5. Iterator for set
+set<int> s = {1,2,3};
+
+auto it = s.begin();
+cout << *it;
+6. Moving Iterator
+
+Forward:
+
+it++;
+
+Backward:
+
+it--;
+
+Example:
+
+auto it = mp.begin();
+it++;
+
+Now it points to the second element.
+
+7. Very Important (For Your Recursion Code)
+
+Instead of modifying the same iterator:
+
+❌ Avoid
+
+it++;
+solve(mp,ans,temp,it,target);
+it--;
+
+✔ Better approach
+
+auto next_it = it;
+next_it++;
+
+solve(mp,ans,temp,next_it,target);
+
+This avoids iterator corruption during recursion.
+
+8. Quick Interview Summary
+
+Ways to initialize iterator:
+
+auto it = container.begin();   // first element
+auto it = container.end();     // after last element
+
+or
+
+container_type::iterator it = container.begin();
+
+for Example
+
+
+vector<int>::iterator it = v.begin();
+map<int,int>::iterator it = mp.begin();
