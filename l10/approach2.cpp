@@ -6,7 +6,10 @@
 //            ans.push_back(sum);
 //            return;
 //        }
+            // pick
 //        solve(arr,ans,i+1,sum+arr[i]);
+
+            // not pick
 //        solve(arr,ans,i+1,sum);
 //    }
   
